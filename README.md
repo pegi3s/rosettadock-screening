@@ -3,9 +3,9 @@
 
 This image facilitates the usage of rosettadock-screening, a tool to help find interactors of a given receptor, using RosettaDock. Because of legal restrictions, you need to build the pegi3s/rosettadock image with the latest tag youself (see instructions [here](http://bdip.i3s.up.pt/container/rosettadock_builder).
 
-# Using the RosettaDock image in Linux
+# Using the RosettaDock-screening image in Linux
 
-In order to be able to use the pegi3s/rosettadock-screening image you must first build the pegi3s/rosettadock:latest image in your computer first, due to legal issues. The instructions are [here](http://bdip.i3s.up.pt/container/rosettadock_builder). Then, you should adapt and run the following command: `docker run -it -v /your/data/dir:/data -v /var/run/docker.sock:/var/run/docker.sock -e HOST_DATA_DIR="$PWD" pegi3s/rosettadock-screening`
+In order to be able to use the pegi3s/rosettadock-screening image you must first build the pegi3s/rosettadock:latest image in your computer first, due to legal issues. The instructions are [here](http://bdip.i3s.up.pt/container/rosettadock_builder). Then, you should adapt and run the following command: `docker run -it -v /your/data/dir:/data -v /var/run/docker.sock:/var/run/docker.sock -e HOST_DATA_DIR="/your/data/dir" pegi3s/rosettadock-screening`
 
 In this command, you should replace:
 - `/your/data/dir` to point to the directory where the data and configuration files are located.
